@@ -19,8 +19,6 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
 
-			Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("Ngo9BigBOggjHTQxAR8/V1JFaF1cX2hIfEx3Rnxbf1x1ZFBMY1VbQHNPMyBoS35Rc0RiWHtedXVTQmNaU0J1VEFc");
-
 #if DEBUG
 		builder.Logging.AddDebug();
 #endif
