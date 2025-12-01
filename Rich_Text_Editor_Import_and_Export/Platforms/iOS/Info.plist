@@ -28,8 +28,5 @@
 	</array>
 	<key>XSAppIconAssets</key>
 	<string>Assets.xcassets/appicon.appiconset</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>App needs photo library access</string>
-
 </dict>
 </plist>

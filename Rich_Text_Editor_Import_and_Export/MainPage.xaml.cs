@@ -130,7 +130,7 @@ public partial class MainPage : ContentPage
             return null;
         }
     }
-    
+
     private void OnClear(object sender, EventArgs e)
     {
         richTextEditor.HtmlText = string.Empty;

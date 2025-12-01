@@ -5,7 +5,7 @@
              x:Class="Rich_Text_Editor_Import_and_Export.MainPage"
              BackgroundColor="White">
 
-    
+
 <Grid RowDefinitions="*,Auto"
           ColumnDefinitions="*"
           Margin="8"
