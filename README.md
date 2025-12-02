@@ -12,6 +12,15 @@ This sample demonstrates how to **import and export Word documents in a .NET MAU
 - Windows
 - macOS
 
+## Demo Output
+
+### Import
+![Import-Demo](https://github.com/user-attachments/assets/66e05e06-7c11-4a77-8366-2c870df31df9)
+
+### Export
+![Export-Demo](https://github.com/user-attachments/assets/09bf0fe5-4d8d-48ea-927a-afa4a3a6405f)
+
+
 
 ## Troubleshooting
 Path too long exception
