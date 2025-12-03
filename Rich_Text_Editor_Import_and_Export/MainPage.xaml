@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:rte="clr-namespace:Syncfusion.Maui.RichTextEditor;assembly=Syncfusion.Maui.RichTextEditor"
+             x:Class="Rich_Text_Editor_Import_and_Export.MainPage"
+             BackgroundColor="White">
+
+
+<Grid RowDefinitions="*,Auto"
+          ColumnDefinitions="*"
+          Margin="8"
+          VerticalOptions="Fill"
+          HorizontalOptions="Fill">
+
+        <!-- RichTextEditor -->
+        <rte:SfRichTextEditor x:Name="richTextEditor"
+                              Grid.Row="0"
+                              HorizontalOptions="Fill"
+                              VerticalOptions="Fill"
+                              ImageRequested="OnImageInserting">
+            <rte:SfRichTextEditor.ToolbarItems>
+                <rte:RichTextToolbarItem Type="FontFamily" />
+                <rte:RichTextToolbarItem Type="FontSize" />
+                <rte:RichTextToolbarItem Type="Separator" />
+                <rte:RichTextToolbarItem Type="Bold" />
+                <rte:RichTextToolbarItem Type="Italic" />
+                <rte:RichTextToolbarItem Type="Underline" />
+                <rte:RichTextToolbarItem Type="Separator" />
+                <rte:RichTextToolbarItem Type="Table" />
+                <rte:RichTextToolbarItem Type="Separator" />
+                <rte:RichTextToolbarItem Type="Hyperlink" />
+                <rte:RichTextToolbarItem Type="Image" />
+            </rte:SfRichTextEditor.ToolbarItems>
+        </rte:SfRichTextEditor>
+
+        <!-- Buttons Row -->
+        <Grid Grid.Row="1"
+              ColumnDefinitions="Auto,8,Auto,*,Auto"
+              ColumnSpacing="8"
+              Margin="4"
+              VerticalOptions="Center"
+              HorizontalOptions="Fill">
+
+            <!-- Import -->
+            <Border Grid.Column="0"
+                    Stroke="#FF3A3939"
+                    StrokeThickness="1.5"
+                    BackgroundColor="#F7F7F7"
+                    StrokeShape="RoundRectangle 12"
+                    Padding="8,6">
+                <Grid ColumnDefinitions="Auto,6,Auto"
+                      VerticalOptions="Center">
+                    <Image Source="import_word.png"
+                           WidthRequest="{OnIdiom Phone=24, Desktop=32}"
+                           HeightRequest="{OnIdiom Phone=24, Desktop=32}" />
+                    <Label Grid.Column="2"
+                           Text="Import as Word"
+                           TextColor="Black"
+                           FontSize="{OnIdiom Phone=12, Desktop=16}"
+                           VerticalOptions="Center" />
+                </Grid>
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnImportClicked" />
+                </Border.GestureRecognizers>
+            </Border>
+
+            <!-- Export -->
+            <Border Grid.Column="2"
+                    Stroke="#FF3A3939"
+                    StrokeThickness="1.5"
+                    BackgroundColor="#F7F7F7"
+                    StrokeShape="RoundRectangle 12"
+                    Padding="8,6">
+                <Grid ColumnDefinitions="Auto,6,Auto"
+                      VerticalOptions="Center">
+                    <Image Source="export_word.png"
+                           WidthRequest="{OnIdiom Phone=24, Desktop=32}"
+                           HeightRequest="{OnIdiom Phone=24, Desktop=32}" />
+                    <Label Grid.Column="2"
+                           Text="Export as Word"
+                           TextColor="Black"
+                           FontSize="{OnIdiom Phone=12, Desktop=16}"
+                           VerticalOptions="Center" />
+                </Grid>
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnExport" />
+                </Border.GestureRecognizers>
+            </Border>
+
+            <!-- Clear -->
+            <Border Grid.Column="4"
+                    Stroke="#FF3A3939"
+                    StrokeThickness="1.5"
+                    BackgroundColor="#F7F7F7"
+                    StrokeShape="RoundRectangle 12"
+                    Padding="8,6"
+                    HorizontalOptions="End">
+                <Label Text="Clear"
+                       TextColor="Black"
+                       FontSize="{OnIdiom Phone=12, Desktop=16}"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center" />
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnClear" />
+                </Border.GestureRecognizers>
+            </Border>
+        </Grid>
+    </Grid>
+</ContentPage>
