@@ -13,6 +13,11 @@ public partial class MainPage : ContentPage
         InitializeComponent();
     }
 
+    /// <summary>
+    /// Get word file using file picker and convert it to HTML and assign it to the Rich Text Editor HtmlText property.
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     private async void OnImportClicked(object sender, EventArgs e)
     {
         var file = await FilePicker.Default.PickAsync(
@@ -60,6 +65,11 @@ public partial class MainPage : ContentPage
         richTextEditor.HtmlText = html;
     }
 
+    /// <summary>
+    /// Insert image while tap image toolbar icon.
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     private async void OnImageInserting(object sender, RichTextEditorImageRequestedEventArgs e)
     {
         e.IsHandled = true;
@@ -71,6 +81,11 @@ public partial class MainPage : ContentPage
         richTextEditor.InsertImage(richTextEditorImageSource);
     }
 
+    /// <summary>
+    /// Export the HTML value to word document by preserving image and text format.
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     private async void OnExport(object sender, EventArgs e)
     {
         var html = PrepareHtml(richTextEditor.HtmlText);
@@ -130,7 +145,11 @@ public partial class MainPage : ContentPage
             return null;
         }
     }
-
+    /// <summary>
+    /// Clear the Rich Text Editor.
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     private void OnClear(object sender, EventArgs e)
     {
         richTextEditor.HtmlText = string.Empty;
