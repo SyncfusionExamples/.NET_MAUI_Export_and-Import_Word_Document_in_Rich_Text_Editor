@@ -1,6 +1,6 @@
 # Easily Import and Export Word Documents in .NET MAUI Rich Text Editor using Syncfusion DocIO
  
-Learn how to import and export Word documents in a .NET MAUI Rich Text Editor using Syncfusion® DocIO. This guide walks through converting Word content into HTML for editing, and exporting editor content back to Word while preserving formatting and images.
+Learn how to import and export Word documents in a [.NET MAUI Rich Text Editor](https://www.syncfusion.com/maui-controls/maui-rich-text-editor) using Syncfusion® DocIO. This guide walks through converting Word content into HTML for editing, and exporting editor content back to Word while preserving formatting and images.
 
 ## Overview
 Managing Word documents across platforms can be challenging. By integrating Syncfusion® DocIO with the .NET MAUI Rich Text Editor, you can seamlessly move content between DOCX and HTML formats. This ensures consistent presentation, embedded images, and smooth editing experiences across iOS, Android, Windows, and macOS.
