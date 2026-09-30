@@ -57,7 +57,7 @@ public partial class MainPage : ContentPage
         using var reader = new StreamReader(htmlStream);
         var html = await reader.ReadToEndAsync();
 
-        richTextEditor.HtmlText = html;
+        richTextEditor.Value = html;
     }
 
     private async void OnImageInserting(object sender, RichTextEditorImageRequestedEventArgs e)
@@ -73,7 +73,7 @@ public partial class MainPage : ContentPage
 
     private async void OnExport(object sender, EventArgs e)
     {
-        var html = PrepareHtml(richTextEditor.HtmlText);
+        var html = PrepareHtml((string)richTextEditor.Value!);
 
         using var document = new WordDocument();
         document.EnsureMinimal();
@@ -133,6 +133,6 @@ public partial class MainPage : ContentPage
 
     private void OnClear(object sender, EventArgs e)
     {
-        richTextEditor.HtmlText = string.Empty;
+        richTextEditor.Value = string.Empty;
     }
 }
